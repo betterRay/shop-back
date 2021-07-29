@@ -26,6 +26,9 @@ import variables from '@/styles/variables.scss'
 
 export default {
   components: { SidebarItem, Logo },
+  mounted() {
+    console.log(this.$router)
+  },
   computed: {
     ...mapGetters([
       'sidebar'

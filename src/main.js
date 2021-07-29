@@ -15,7 +15,7 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control 引入token校验
 
-import * as API from '@/api/product/index'
+import * as API from '@/api/index'
 import SelectionFloor from '@/components/SelectionFloor'
 import HintButton from '@/components/HintButton'
 

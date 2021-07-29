@@ -90,6 +90,38 @@ export const constantRoutes = [
   ]
   },
 
+  {
+    path: '/permission',
+    component: Layout,
+    redirect: '/permission/user',
+    name:'Permission',
+    meta: { title: '权限管理', icon: 'user' },
+    children: [{
+      path: 'user',
+      name: 'User',
+      component: () => import('@/views/permission/user'),
+      meta: { title: '用户管理'}
+    },
+    {
+      path: 'role',
+      name: 'Role',
+      component: () => import('@/views/permission/role'),
+      meta: { title: '角色管理'}
+    },{
+      path: 'menu',
+      name: 'Menu',
+      component: () => import('@/views/permission/menu'),
+      meta: { title: '菜单管理'}
+    },{
+      path: 'auth/:id?',
+      name: 'Auth',
+      hidden: true,
+      component: () => import('@/views/permission/auth'),
+      meta: { title: '角色权限' }
+    },
+  ]
+  },
+
   // {
   //   path: '/example',
   //   component: Layout,

@@ -137,7 +137,7 @@
 
 <script>
 import cloneDeep from "lodash/cloneDeep";
-import { attr } from '@/api/product';
+import { attr } from '@/api';
 export default {
   name: "attr",
   data() {
